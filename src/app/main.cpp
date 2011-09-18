@@ -1,5 +1,7 @@
 #include <QtGui/QApplication>
-#include "mainwindow.h"
+#include <core/mainwindow.h>
+
+using namespace Core;
 
 int main(int argc, char *argv[])
 {

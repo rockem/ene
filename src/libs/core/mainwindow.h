@@ -1,13 +1,14 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-
 #include <QMainWindow>
 
 namespace Ui {
     class MainWindow;
 }
 
-class MainWindow : public QMainWindow
+namespace Core {
+
+class Q_DECL_EXPORT MainWindow : public QMainWindow
 {
     Q_OBJECT
 
@@ -20,6 +21,9 @@ private:
 
 private slots:
     void on_exit_triggered();
+    void on_newFile_triggered();
+
 };
 
+}
 #endif // MAINWINDOW_H

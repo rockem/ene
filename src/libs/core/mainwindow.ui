@@ -16,7 +16,7 @@
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
-     <widget class="QTextEdit" name="textEdit"/>
+     <widget class="QtTextBufferView" name="bufferTextArea"/>
     </item>
    </layout>
   </widget>
@@ -26,13 +26,15 @@
      <x>0</x>
      <y>0</y>
      <width>400</width>
-     <height>22</height>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
     <property name="title">
      <string>File</string>
     </property>
+    <addaction name="newFile"/>
+    <addaction name="separator"/>
     <addaction name="exit"/>
    </widget>
    <addaction name="menuFile"/>
@@ -51,8 +53,20 @@
     <string>Exit</string>
    </property>
   </action>
+  <action name="newFile">
+   <property name="text">
+    <string>New</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QtTextBufferView</class>
+   <extends>QTextEdit</extends>
+   <header>qttextbufferview.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

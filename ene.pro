@@ -1,18 +1,12 @@
-#-------------------------------------------------
-#
-# Project created by QtCreator 2011-06-25T18:31:43
-#
-#-------------------------------------------------
+#version check qt
+contains(QT_VERSION, ^4\.[0-4]\..*) {
+    message("Cannot build Qt Creator with Qt version $$QT_VERSION.")
+    error("Use at least Qt 4.5.")
+}
 
-QT       += core gui
+include(ene.pri)
 
-TARGET = ene
-TEMPLATE = app
+TEMPLATE  = subdirs
+CONFIG   += ordered
 
-
-SOURCES += main.cpp\
-        mainwindow.cpp
-
-HEADERS  += mainwindow.h
-
-FORMS    += mainwindow.ui
+SUBDIRS = lib src
